@@ -22,17 +22,63 @@ const solanaMetadata = {
 };
 
 // If you have selected Solana then the collection starts from 0 automatically
+// Tattoo does not combine with Neck Accessories
+// Snake hair does not combine with Head Accessories
 const layerConfigurations = [
   {
-    growEditionSizeTo: 5,
+    growEditionSizeTo: 4000,
     layersOrder: [
       { name: "Background" },
-      { name: "Eyeball" },
-      { name: "Eye color" },
-      { name: "Iris" },
-      { name: "Shine" },
-      { name: "Bottom lid" },
-      { name: "Top lid" },
+      { name: "Body" },
+      { name: "Mouth" },
+      { name: "Third Eye" },
+      { name: "Neck Accessories" },
+      { name: "Eyes" },
+      { name: "Body Accessories" },
+      { name: "Hair" },
+      { name: "Head Accessories" }
+    ],
+  },
+  {
+    growEditionSizeTo: 4400,
+    layersOrder: [
+      { name: "Background" },
+      { name: "Body" },
+      { name: "Mouth" },
+      { name: "Third Eye" },
+      { name: "Tattoo" },
+      { name: "Eyes" },
+      { name: "Body Accessories" },
+      { name: "Hair" },
+      { name: "Head Accessories" }
+    ],
+  },
+  {
+    growEditionSizeTo: 4440,
+    layersOrder: [
+      { name: "Background" },
+      { name: "Body" },
+      { name: "Mouth" },
+      { name: "Third Eye" },
+      { name: "Neck Accessories" },
+      { name: "Eyes" },
+      { name: "Body Accessories" },
+      { name: "Hair" },
+      { name: "Snake Hair" },
+    ],
+  },
+  {
+    growEditionSizeTo: 4444,
+    layersOrder: [
+      { name: "Background" },
+      { name: "Body" },
+      { name: "Mouth" },
+      { name: "Third Eye" },
+      { name: "Tattoo" },
+      { name: "Eyes" },
+      { name: "Body Accessories" },
+      { name: "Hair" },
+      { name: "Snake Hair" },
     ],
   },
 ];
@@ -42,8 +88,8 @@ const shuffleLayerConfigurations = false;
 const debugLogs = false;
 
 const format = {
-  width: 512,
-  height: 512,
+  width: 2000,
+  height: 2000,
   smoothing: false,
 };
 
@@ -72,7 +118,7 @@ const pixelFormat = {
 };
 
 const background = {
-  generate: true,
+  generate: false,
   brightness: "80%",
   static: false,
   default: "#000000",
