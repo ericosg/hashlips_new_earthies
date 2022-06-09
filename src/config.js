@@ -22,11 +22,16 @@ const solanaMetadata = {
 };
 
 // If you have selected Solana then the collection starts from 0 automatically
-// Tattoo does not combine with Neck Accessories
-// Snake hair does not combine with Head Accessories
+/*  Tattoo does not combine with Neck Accessories
+    Snake hair does not combine with Head Accessories
+    a) No Tattoo        / No Snake    x3952
+    b) No Neck          / No Snake    x444
+    a) No Tattoo        / With Snake  x44
+    b) No Neck/Clothes  / With Snake  x4
+*/
 const layerConfigurations = [
   {
-    growEditionSizeTo: 4000,
+    growEditionSizeTo: 3952,
     layersOrder: [
       { name: "Background" },
       { name: "Body" },
@@ -40,7 +45,7 @@ const layerConfigurations = [
     ],
   },
   {
-    growEditionSizeTo: 4400,
+    growEditionSizeTo: 4396,
     layersOrder: [
       { name: "Background" },
       { name: "Body" },
@@ -76,7 +81,6 @@ const layerConfigurations = [
       { name: "Third Eye" },
       { name: "Tattoo" },
       { name: "Eyes" },
-      { name: "Body Accessories" },
       { name: "Hair" },
       { name: "Snake Hair" },
     ],
@@ -124,7 +128,9 @@ const background = {
   default: "#000000",
 };
 
-const extraMetadata = {};
+const extraMetadata = {
+  creator: "@marius.zaha",
+};
 
 const rarityDelimiter = "#";
 
